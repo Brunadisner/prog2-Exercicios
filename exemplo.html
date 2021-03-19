@@ -66,9 +66,60 @@
             </summary>
             <p>Acesse <a href="http://cc.uffs.edu.br">cc.uffs.edu.br</a></p>
         </details>
-        <hr><br>
+        <br><hr>
         <h1>Links</h1>
-        
+
+        <p>Link absoluto: <a href="http://www.uol.com.br">Uol</a></p>
+        <p>Link relativo (mesma pasta): <a href="modelo.html">Nossa página modelo</a></p>
+        <p>Link relativo (subpasta): <a href="modelos/modelo2.html">Outra cópia da nossa página modelo em uma subpasta</a></p>
+        <p>Link relativo (pasta um nível acima): <a href="../modelo3.html">Mais uma cópia da nossa página modelo em uma pasta um nível acima</a></p>
+        <p>Âncora: <a href="#inicio">Ir para o início</a></p>
+        <p>Link abrindo em nova janela: <a href="http://www.uol.com.br" target="_blank">Uol</a></p>
+
+        <br><hr>
+        <h1>Imagens</h1>
+        <p> <img src="uffs.jpg" alt="Logotipo da UFFS"></p>
+            <figure>
+                <img src="uffs.jpg" alt="Logotipo da UFFS">
+                <figcaption>Legenda da imagem</figcaption>
+            </figure>
+        <br><hr>
+        <h1>Tabelas</h1>
+        <table border="1"> <!-- não usar border. deixar em CSS -->
+            <tr>
+                <th>cabeçalho 1</th>
+                <th>cabeçalho 2</th>
+            </tr>
+            <tr>
+                <td>linha 1, célula 1</td>
+                <td>linha 1, célula 2</td>
+            </tr>
+            <tr>
+                <td>linha 2, célula 1</td>
+                <td>linha 2, célula 2</td>
+            </tr>
+        </table>
+        <p>Tabela com células mescladas:</p>
+        <table border="1"><!-- não usar border. deixar em CSS -->
+            <tr>
+                <td colspan="3">3 colunas</td>
+                <td>normal</td>
+                <td>normal</td>
+            </tr>
+            <tr>
+                <td rowspan="2">col 1</td>
+                <td>col 2</td>
+                <td>col 3</td>
+                <td>col 4</td>
+                <td>col 5</td>
+            </tr>
+            <tr>
+                <td>col 2</td>
+                <td>col 3</td>
+                <td>col 4</td>
+                <td>col 5</td>
+            </tr>
+        </table>
 
     </body>
 </html>
