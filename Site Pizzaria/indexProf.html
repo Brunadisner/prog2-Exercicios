@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>Pizzaria Byte</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Site da Pizzaria">
+    <meta name="keywords" content="Pizza, Pedido online"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Pizza Byte</h1>
+        <p>Love at first byte</p>
+        <span id="showMenu" onclick="showMenu()">&equiv; Menu</span>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="quemsomos.html">Quem somos</a></li>
+            <li><a href="precos.html">Preços</a></li>
+            <li><a href="pedido.html">Faça seu pedido</a></li>
+            <li><a href="cliente.html">Área do cliente</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- conteúdo específico -->
+        <h2>Início</h2>
+        <hr>
+        <div id="imgByte">
+            <picture>
+                <source media="(min-width: 700px)" srcset="assets/images/pizza.jpg" width="200px">
+                <img src="assets/images/pizza_byte.jpg" id="byte" alt="Imagem de uma pizza pixelizada">
+            </picture>
+            <h3>Love at first byte!</h3>
+        </div>
+    </main>
+
+    <aside>
+        <h4>Promoção da semana</h4>
+    </aside>
+
+    <footer>
+        <div id="chat">
+            <div id="texto">Clique aqui para falar com os atendentes</div>
+            <div id="botoes">
+                <span id="minChat" class="btChat" onclick="minChat()">&or;</span>
+                <span id="maxChat" class="btChat" onclick="maxChat()">&and;</span>
+                <span id="closeChat" class="btChat" onclick="closeChat()">x</span>
+            </div>
+        </div>
+        <p>Pizzaria Byte</p>
+        <p>
+            Peça pelo telefone (49)00000-0000
+        </p>
+        <ul>
+            <li><a href="https://www.facebook.com/pizzabyte/"><img src="assets/images/facebook.png" alt="Facebook"></a>
+            </li>
+            <li><a href="https://www.twitter.com/pizzabyte/"><img src="assets/images/twitter.png" alt="Twitter"></a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>
