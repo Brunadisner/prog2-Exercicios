@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Disner's Pizzaria</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Bruna Disner">
+        <meta name="description" content="Página Pizzaria">
+        <meta name="keywords" content="Pizzaria, Disner's, Pizza, pedido online">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- links para os arquivos css-->
+    </head>
+    <body>
+        <header>
+            <h1>Pizzaria Disner's</h1>
+            <h2>A melhor Pizza de Chapecó</h2>
+            <nav><img src="img1.jpg" alt="Logotipo pizzaria" ></nav>
+
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="quemsomos.html">Quem Somos</a></li>
+                <li><a href="precos.html">Preços</a></li>
+                <li><a href="pedido.html">Pedido</a></li>
+                <li><a href="cliente.html">Cliente</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <h2>Cadastro</h2>
+            <!--Action:é a pagina php que vai as informações de login-->
+            <!--Metodo get mostra os dados na url, os dados enviados pelo formulario, o método POST deixa-->
+            <!--size: tamanho do campo, maxlenght: número max de caracteres, value: preenche com um valor padrão, placeholder: preenche com uma dica-->
+            <form method="POST" action="">
+                <div>
+                    <label for="id_nome">Nome completo: </label> 
+                    <input type="text" name="field_nome" size="50" maxlength="50" 
+                    placeholder="Informe o seu nome completo" id="id_nome">
+                </div>
+                <div>
+                    <label for="id_email">E-mail: </label> 
+                    <input type="email" name="field_email" size="50" maxlength="50" 
+                    placeholder="Digite seu e-mail" id="id_email">   
+                </div>
+                <div>
+                    <label for="id_endereco">Endereço: </label> 
+                    <input type="text" name="field_endereco" size="50" maxlength="50" 
+                    placeholder="Rua, número, complemento" id="id_endereco">   
+                </div>
+                <div>
+                    <label for="id_bairro">Bairro</label>
+                    <select id="id_bairro"name="field_bairro">
+                        <option>Selecione</option>
+                        <option>Centro</option>
+                        <option>Efapi</option>
+                        <option>Engenho Braum</option>
+                        <option>Jardim Itália</option>
+                        <option>Saic</option>
+                        <option>Vederti</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="id_date">Data de nascimento: </label> 
+                    <input type="date" name="field_date" size="50" maxlength="50" id="id_date">   
+                </div>
+                <div>
+                    <label for="id_telefone">Telefone: </label> 
+                    <input type="tel" name="field_telefone" size="50" maxlength="50" id="id_telefone">   
+                </div>
+                <div>
+                    <label for="id_senha">Senha: </label> 
+                    <input type="password" name="field_senha" size="50" maxlength="50" id="id_senha">   
+                </div>
+                <div>
+                    <label for="id_senha2">Confirme a senha: </label> 
+                    <input type="password" name="field_senha2" size="50" maxlength="50" 
+                    placeholder="" id="id_senha2">   
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>Como conheceu nossa empresa?</legend>
+                        <label><input type="radio" name="field_comoConheceu">Loja física</label>
+                        <br>
+                        <label><input type="radio" name="field_comoConheceu">Redes sociais</label>
+                        <br>
+                        <label><input type="radio" name="field_comoConheceu">Publicidade</label>
+                        <br>
+                        <label><input type="radio" name="field_comoConheceu">Indicação de amigos</label>
+                </fieldset>
+            </div>
+            <div>
+                <label><input type="checkbox" name="field_promo1" checked>Quero receber promoção da Pizzaria Disner's</label>
+            </div>
+            <br>
+            <div>
+                <input type="submit" value="Cadastrar">
+                <input type="submit" value="Limpar campos">
+            </div>
+            
+            </form>
+        </main>
+        <aside>
+            <h3>Promoção da semana</h3>
+            <h4>Confira os combos da semana</h4>
+        </aside>
+
+        <footer>
+            <div id="chat">
+                <div id="texto">Clique aqui para falar com os atendentes</div>
+            </div>
+            <p>Pizzaria Disner's</p>
+            <p>Telefone: (49) 9999-9999 ou (49) 3322-4455</p>
+            <div>
+                <a href="instagram.com/pizzariadisners"><img src="instagram.svg" alt="Instagram" width="50px"></a>
+                <a href="facebook.com/pizzariadisners"><img src="facebook.svg" alt="Facebook" width="50px"></a>
+                <a href="twiter.com/pizzariadisners"><img src="twitter.svg" alt="Twitter" width="50px"></a>
+            </div>
+
+
+
+        </footer>
+
+    </body>
+
+</html>
