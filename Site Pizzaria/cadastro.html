@@ -33,7 +33,7 @@
             <!--Action:é a pagina php que vai as informações de login-->
             <!--Metodo get mostra os dados na url, os dados enviados pelo formulario, o método POST deixa-->
             <!--size: tamanho do campo, maxlenght: número max de caracteres, value: preenche com um valor padrão, placeholder: preenche com uma dica-->
-            <form method="POST" action="">
+            <form method="POST" action="mailto:teste@teste" autocomplete="off">
                 <div>
                     <label for="id_nome">Nome completo: </label> 
                     <input type="text" name="field_nome" size="50" maxlength="50" 
@@ -81,17 +81,19 @@
                 <div>
                     <fieldset>
                         <legend>Como conheceu nossa empresa?</legend>
-                        <label><input type="radio" name="field_comoConheceu">Loja física</label>
+                        <label><input type="radio" name="field_comoConheceu" value="Loja física">Loja física</label>
                         <br>
-                        <label><input type="radio" name="field_comoConheceu">Redes sociais</label>
+                        <label><input type="radio" name="field_comoConheceu" value="Redes sociais">Redes sociais</label>
                         <br>
-                        <label><input type="radio" name="field_comoConheceu">Publicidade</label>
+                        <label><input type="radio" name="field_comoConheceu"value="Publicidade">Publicidade</label>
                         <br>
-                        <label><input type="radio" name="field_comoConheceu">Indicação de amigos</label>
+                        <label><input type="radio" name="field_comoConheceu"value="Indicação de amigos">Indicação de amigos</label>
                 </fieldset>
             </div>
             <div>
-                <label><input type="checkbox" name="field_promo1" checked>Quero receber promoção da Pizzaria Disner's</label>
+                <label><input type="checkbox" name="field_promo1" value="sim"checked>
+                    Quero receber promoção da Pizzaria Disner's
+                </label>
             </div>
             <br>
             <div>

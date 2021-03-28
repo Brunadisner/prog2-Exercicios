@@ -27,7 +27,45 @@
         </nav>
         
         <main>
-            <nav><img src="img1.jpg" alt="Logotipo pizzaria" ></nav>
+            <h2>Entre em contato conosco</h2>
+            <form>
+                <div>
+                    <label for="nome">Nome completo:</label>
+                    <input type="text" name="nome" id="name" size="50" maxlength="50" 
+                    required autocomplete="off" autofocus>
+                </div>
+                <br>
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" size="50" maxlength="50" id="name">
+                </div>
+                <br>
+                <div>
+                    <label for="fone">Telefone:</label>
+                    <input type="tel" name="fone" size="50" maxlength="50" id="fone" placeholder="(xx)xxxxx-xxxx">
+                </div>
+                <br>
+                <div>
+                    <label for="assunto">Assunto:</label>
+                    <select name="assunto">
+                        <option>Selecione</option>
+                        <option>Dúvidas</option>
+                        <option>Sugestões</option>
+                        <option>Elogios</option>
+                        <option>Críticas</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="msg">Mensagem:</label>
+                    <textarea name="mensagem"></textarea>
+                </div>
+                <br>
+                <div>
+                    <input type="submit" value="Enviar">
+                    <input type="submit" value="Limpar campos">
+                </div>
+            </form>
             
 
         </main>
