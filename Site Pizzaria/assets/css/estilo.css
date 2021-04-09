@@ -1,0 +1,8 @@
+/* seletores para usar no css:
+- nome do elemento, exemplo: h3, nav, p
+- classe (inicia com .)
+- id (inicia com #) */
+body { 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
