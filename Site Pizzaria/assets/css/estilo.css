@@ -20,11 +20,20 @@ header{
     margin: 2px;  
     
 }
-header h2{
+header  h2{
     font-style: italic;
     text-transform: capitalize;
     letter-spacing: 3px;
+    color: #31D60F;
 }
+header  h1{
+    font-style: bold;
+    font-family: 'Trebuchet MS';
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    color: #31D60F;
+}
+
 header, footer{
     background-color: rgb(253, 97, 97);
 }
@@ -53,11 +62,12 @@ main{
 }
 
 aside{
+    
     width: 15%;
     height: 300px;
     background-color: rgb(180, 6, 6);
     color: bisque;
-    height: ;
+   
 }
 
 header, footer, nav, aside,main{
@@ -65,7 +75,7 @@ header, footer, nav, aside,main{
 }
 
 h1,h2{
-    color: bisque;
+    color:rgb(114, 109, 109);
 }
 /*-----------link-------*/
 a{
@@ -84,6 +94,7 @@ a:hover{
 a:active{
     color: white(41, 30, 201);
 }
+
 /*-------Menu------*/
 nav ul li{
     display: inline;/*transforma em elemento inline*/
@@ -119,17 +130,11 @@ tr:nth-child(odd){
     width: 50%;
     max-width: 435px;
     position: relative;
-    float: right;
+    float: left;
     padding:0px 20px;
 }
-#pizza2{
-    width: 50%;
-    max-width: 450px;
-    float: left;
-    position: relative;
-    padding:0px 0px 0px 20px;
-}
 #inicio{
+    width: 85%;
     color: brown;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
     letter-spacing: 3px;
@@ -138,8 +143,43 @@ tr:nth-child(odd){
 }
 #inicio h3{
     clear: both;
-    text-align: center;
 }
 .clear{
     clear: both;
 }
+/*---------formularios-----------*/
+input[type=text], input[type=email], input[type=password], input[type=tel],
+input[type=date],textarea, select{
+    background-color: lightblue;
+    padding: 3px;
+    width: 30%;
+    height: 30px;
+    margin-top: 5px;
+    border-bottom: 5%;
+    border-top: 5%;
+    border-style:dotted;
+    border-color: blue;
+    border-radius: 5%;
+    border-width: 2px;
+}
+textarea{
+    width: 30%;
+    height: 100px;
+}
+input[type=submit]{
+    width: 30%;
+    font-size: large;
+    background-color:aliceblue;
+    border-color: aqua;
+}
+fildset{
+    width: 300px;
+    height: 250px;
+}
+legend{
+    font-style: bold;
+}
+#cadastro a{
+    color:rgb(19, 80, 158);
+}
+
