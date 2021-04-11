@@ -14,6 +14,7 @@ body {
     position:absolute;
     bottom: 69%;
     left: 0%;
+    display: none;
 }
 header{
     text-align: center;
@@ -45,18 +46,13 @@ nav{
     font-weight:bold ;
     
 }
-footer{
-    clear: left;
-}
-main,aside{
-    float: left;
-}
+
 main p{
     line-height: 1.5;
     
 }
 main{
-    width: 85%;
+    width: 100%;
 }
 
 *{
@@ -65,8 +61,8 @@ main{
 
 aside{
     
-    width: 15%;
-    height: 300px;
+    width: 100%;
+    height: 200px;
     background-color: rgb(180, 6, 6);
     color: bisque;
     margin-top: 1%;
@@ -100,9 +96,18 @@ a:active{
 
 /*-------Menu------*/
 nav ul li{
-    display: inline;/*transforma em elemento inline*/
-    padding: 10px;
-    margin: 20px;
+    list-style-type: none;
+    padding: 5px;
+}
+nav{
+    display: none;
+}
+#showMenu{
+    color:white;
+    border: 1px dotted white;
+    padding:5px;
+    margin-right: 80%;
+
 }
 /*--------tabela---------*/
 th,table,td{
@@ -124,14 +129,16 @@ tr:nth-child(odd){
 /*-----------chat---------*/
 #chat{
     color:white;
+    display: flex;
     background-color: #31D60F;
     width: 300px;
-    height: 100px;
+    height: 50px;
     position: fixed;
-    right: 50px;
+    left: 50px;
     bottom: 5px;
     border-radius: 5px;
     font-style: bold;
+    display: none;
     
 
 }
@@ -142,6 +149,7 @@ tr:nth-child(odd){
     position: relative;
     float: right;
     padding:0px 20px;
+    display: none;
 }
 #pizza{
     width: 50%;
@@ -200,27 +208,113 @@ legend{
     color:rgb(19, 80, 158);
 }
 /*------------footer------*/
-footer{
+footer ul li{
+    display: inline;
+}
+footer {
     color:white;
     font-style: italic;
     font-weight: bold;
+    display: flex;
+    display: row;/*linha*/
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
 }
 #instagram{
     width: 30px;
+    align-self: flex-end;
     position: relative;
     margin-left: 5px;
+    float: left;
     
 }
 #facebook{
     width: 30px;
     position: relative;
     margin-left: 20px;
+    float: left;
     
     
 }
 #twitter{
     width: 30px;
-    margin-left: 20px;
-    
-    
+    margin-left: 20px;   
+    float: left;
+}
+/*----------Sabores------------*/
+.sabores{
+    width: 280px;
+    height: 120px;
+    border: 2px dotted yellow;
+    margin: 5px;
+    padding: 5px;
+    background-color: bisque;
+    transition: 0.6s;
+}
+.sabores :hover{
+    box-shadow: 3px 3px 10px rgb(204, 41, 68);
+    transition: 0.6s;
+}
+.sabores label{
+    display: flex;
+    align-items:center;
+}
+.sabores img{
+    width: 80px;
+    border-radius: 30px;
+    margin: 0 10px 0 10px;
+
+}
+.sabor-desc{
+    display: flex;
+    flex-direction: column;
+}
+.sabor-selecionado{
+    background-color: #31D60F;
+    transition: 1s;
+}
+
+
+@media only screen and (min-width: 750px){
+
+    main{
+        width: 85%;
+    }
+    aside{
+        width: 15%;
+        height: 300px;
+    }
+    footer{
+        clear: left;
+    }
+    main,aside{
+        float: left;
+    }
+    .logo{
+        
+        display: initial;
+    }
+    #pizza2{
+        width: 55%;
+        max-width: 470px;
+        position: relative;
+        float: right;
+        padding:0px 20px;
+        display: initial;
+    }
+    #chat{
+        display:initial;
+    }
+    nav ul li{
+        display: inline;/*transforma em elemento inline*/
+        padding: 10px;
+        margin: 20px;
+    }
+    nav{
+        display: block;
+    }
+    #showMenu{
+        display: none;
+    }
 }

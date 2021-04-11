@@ -32,6 +32,45 @@
         
         <main>
             <h2>Faça o seu pedido.</h2>
+            <hr>
+            <form>
+                <label for="tamanho">Selecione o tamanho da pizza:</label>
+                <select name="tamanho" id="tamanho">
+                    <option value="">-------SELECIONE------</option>
+                    <option value="p">P-8 fatias</option>
+                    <option value="m">M-12 fatias</option>
+                    <option value="g">G-16 fatias</option>
+                    <option value="gg">GG-20 fatias</option>
+                </select>
+                <br>
+                <div class="sabores sabor-selecionado">
+                    <label>
+                        <input type="checkbox" name="sabores[]" value="">
+                        <div class="img-pizza">
+                            <img src="assets/img/lombo.jpg" alt="lombo">
+                        </div>
+                        <div class="sabor-desc">
+                            <strong>Frango com Catupiry:</strong>
+                            Molho, frango, catupiry e mussarela
+                        </div>
+                    </label>
+                </div>
+                
+                
+
+
+                <fieldset>
+                    <legend>Selecione a opção de borda:</legend>
+                    <label><input type="radio" name="borda" value=""checked>Sem borda</label><br>
+                    <label><input type="radio" name="borda" value="">Chocolate</label><br>
+                    <label><input type="radio" name="borda" value="">Catupiry</label><br>
+                    <label><input type="radio" name="borda" value="">Nutella</label><br>
+                    <label><input type="radio" name="borda" value="">Doce de leite</label><br>
+                </fieldset>
+                <br>
+                <input type="submit" value="Adicionar ao carrinho" name="adicionar">
+
+            </form>
 
         </main>
         <aside >
