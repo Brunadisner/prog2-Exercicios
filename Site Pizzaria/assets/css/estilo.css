@@ -180,7 +180,7 @@ input[type=text], input[type=email], input[type=password], input[type=tel],
 input[type=date],textarea, select{
     background-color: lightblue;
     padding: 3px;
-    width: 30%;
+    width: 70%;
     height: 30px;
     margin-top: 5px;
     border-bottom: 5%;
@@ -189,6 +189,9 @@ input[type=date],textarea, select{
     border-color: blue;
     border-radius: 5%;
     border-width: 2px;
+}
+select{
+    width: 50%;
 }
 textarea{
     width: 30%;
@@ -200,9 +203,16 @@ input[type=submit]{
     background-color:aliceblue;
     border-color: aqua;
 }
+input[type=submit]{
+    width: 60%;
+}
+fieldset{
+    color:darkblue;
+}
 
 legend{
     font-style: bold;
+    font-size: medium;
 }
 #cadastro a{
     color:rgb(19, 80, 158);
@@ -277,7 +287,7 @@ footer {
 #lista{
     display: flex;
     flex-direction: row;
-    justify-content:flex-start;
+    justify-content:space-between;
     flex-wrap:wrap;
 }
 
@@ -322,5 +332,16 @@ footer {
     }
     #showMenu{
         display: none;
+    }
+    input[type=submit]{
+        width: 30%;
+    }
+    select{
+        width: 30%;
+    }
+    input[type=text], input[type=email], input[type=password], input[type=tel],
+    input[type=date],textarea{
+        width: 30%;
+        
     }
 }
