@@ -245,7 +245,7 @@ footer {
 /*----------Sabores------------*/
 .sabores{
     width: 280px;
-    height: 120px;
+    min-height: 120px;
     border: 2px dotted yellow;
     margin: 5px;
     padding: 5px;
@@ -270,9 +270,15 @@ footer {
     display: flex;
     flex-direction: column;
 }
-.sabor-selecionado{
+/*.sabor-selecionado{
     background-color: #31D60F;
     transition: 1s;
+}*/
+#lista{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    flex-wrap:wrap;
 }
 
 
