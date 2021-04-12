@@ -292,7 +292,7 @@ footer {
 }
 
 
-@media only screen and (min-width: 750px){
+@media only screen and (min-width: 900px){
 
     main{
         width: 85%;
@@ -362,9 +362,12 @@ footer {
     }
     input[type=text], input[type=email], input[type=password], input[type=tel],
     input[type=date],textarea{
-        width: 30%;
+        width: 50%;
         display: inline-block;
         
+    }
+    input [type=email]{
+        margin-right: 5px;
     }
     .mapa{
         width:600px;
