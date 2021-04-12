@@ -34,7 +34,7 @@
             <!--Action:é a pagina php que vai as informações de login-->
             <!--Metodo get mostra os dados na url, os dados enviados pelo formulario, o método POST deixa-->
             <!--size: tamanho do campo, maxlenght: número max de caracteres, value: preenche com um valor padrão, placeholder: preenche com uma dica-->
-            <form method="POST" action="mailto:teste@teste" autocomplete="off">
+            <form method="POST" action="" autocomplete="off" onsubmit="return validateForm()">
                 <div>
                     <label for="id_nome">Nome completo: </label> 
                     <input type="text" name="field_nome" size="50" maxlength="50" 
@@ -67,17 +67,12 @@
                 </div>
                 <br>
                 <div>
-                    <label for="id_date">Data de nascimento: </label> 
-                    <input type="date" name="field_date" size="50" maxlength="50" id="id_date">   
-                </div>
-                <br>
-                <div>
                     <label for="id_telefone">Telefone: </label> 
                     <input type="tel" name="field_telefone" size="50" maxlength="50" id="id_telefone">   
                 </div>
                 <br>
                 <div>
-                    <label for="id_senha">Senha: </label> 
+                    <label for="id_senha" >Senha: </label> 
                     <input type="password" name="field_senha" size="50" maxlength="50" id="id_senha">   
                 </div>
                 <br>

@@ -85,3 +85,48 @@ function addToCart(){
         }
     }
 }
+
+/*validação de fórmulario*/
+function validateForm(){
+    var nome = document.getElementById("id_nome").value;
+    var email = document.getElementById("id_email").value;
+    var end = document.getElementById("id_endereco").value;
+    var telefone = document.getElementById("id_telefone").value;
+    var bairro = document.getElementById("id_bairro").value;
+    var senha = document.getElementById("id_senha").value;
+    var confirma_senha = document.getElementById("id_senha2");
+    if (nome == null || nome == "" || nome.indexOf(" ") == -1){
+        alert("O nome completo deve ser preenchido");
+        return false;
+    }
+    if (email == null || email == "" || email.indexOf("@") == -1){
+        alert("O email deve ser preenchido");
+        return false;
+    }
+    if (end == null || end == "" || end.indexOf(" ") == -1){
+        alert("O endereço deve ser preenchido");
+        return false;
+    }
+    if (telefone == null || telefone == "" || telefone.indexOf(" ") == -1){
+        alert("O telefone deve ser preenchido");
+        return false;
+    }
+    if (bairro == null || bairro == ""){
+        alert("O bairro deve ser preenchido");
+        return false;
+    }
+    if (senha == null || senha == ""){
+        alert("A senha deve ser preenchida");
+        return false;
+    }
+  
+    if(senha.value != confirma_senha.value){
+        confirma_senha.setCustomValidity("Senhas diferentes!");
+    }
+    else{
+        confirma_senha.setCustomValidity('');
+    }
+    
+}
+
+   
