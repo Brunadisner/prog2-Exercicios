@@ -20,11 +20,24 @@ function showMenu(){
     else
         menu.style.display = 'block';
 }
-{
-    document.body.onresize = function resize(){
-        window.innerWidth;
-        if(largura >= 700){
-            menu.style.display = 'block';
-        }   
-    }
+
+document.body.onresize = function resize(){
+    window.innerWidth;
+    if(largura >= 700){
+         menu.style.display = 'block';
+    }  
+    else{
+        menu.style.display = 'none';
+    } 
 };
+
+function selectPizzaSize(){
+    currentSize = document.getElementById("tamanho").Value;
+    if(currentSize == ""){
+        document.getElementById("opcoes_pedido").style.display = "none";
+    }
+    else{
+        document.getElementById("opcoes_pedido").style.display = "block";
+    }
+
+}

@@ -33,16 +33,17 @@
         <main>
             <h2>Faça o seu pedido.</h2>
             <hr>
-        <form>
-                <label for="tamanho">Selecione o tamanho da pizza:</label>
-                <select name="tamanho" id="tamanho">
-                    <option value="">-------SELECIONE------</option>
-                    <option value="p">P-8 fatias</option>
-                    <option value="m">M-12 fatias</option>
-                    <option value="g">G-16 fatias</option>
-                    <option value="gg">GG-20 fatias</option>
-                </select>
-                <br>
+        <form method="post">
+            <label for="tamanho">Selecione o tamanho da pizza:</label>
+            <select name="tamanho" id="tamanho" onchange="selectPizzaSize()">
+                <option value="">-------SELECIONE------</option>
+                <option value="p">P-8 fatias</option>
+                <option value="m">M-12 fatias</option>
+                <option value="g">G-16 fatias</option>
+                <option value="gg">GG-20 fatias</option>
+            </select>
+            <br>
+        <div id="opcoes_pedido">
             <div id="lista">
                 <div class="sabores sabor-selecionado">
                     <label>
@@ -183,6 +184,7 @@
                 </fieldset>
                 <br>
                 <input type="submit" value="Adicionar ao carrinho" name="adicionar">
+        </div>
     </form>
 
         </main>
@@ -217,5 +219,5 @@
         </footer>
 
     </body>
-
+    <script src="assets/js/function.js"></script>
 </html>

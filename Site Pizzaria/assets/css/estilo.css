@@ -245,7 +245,7 @@ footer {
     margin-left: 20px;   
     float: left;
 }
-/*----------Sabores------------*/
+/*----------Pedido------------*/
 .sabores{
     width: 280px;
     min-height: 120px;
@@ -282,6 +282,9 @@ footer {
     flex-direction: row;
     justify-content:space-between;
     flex-wrap:wrap;
+}
+#opcoes_pedido{
+    display: none;
 }
 .mapa{
     width:400px;
