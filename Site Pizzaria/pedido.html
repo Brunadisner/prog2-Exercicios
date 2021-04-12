@@ -33,7 +33,7 @@
         <main>
             <h2>Faça o seu pedido.</h2>
             <hr>
-        <form method="post">
+        <form method="post" onsubmit="return addToCart()">
             <label for="tamanho">Selecione o tamanho da pizza:</label>
             <select name="tamanho" id="tamanho" onchange="selectPizzaSize()">
                 <option value="">-------SELECIONE------</option>
@@ -43,11 +43,13 @@
                 <option value="gg">GG-20 fatias</option>
             </select>
             <br>
+          
         <div id="opcoes_pedido">
+            <p>Você selecionou <strong id="numSabores">0</strong> de <strong id="limiteSabores">0</strong> sabores</p>  
             <div id="lista">
                 <div class="sabores sabor-selecionado">
                     <label>
-                        <input type="checkbox" name="sabores[]" value="">
+                        <input type="checkbox" name="sabores[]" value="" onchange="updateCount()">
                         <div class="img-pizza">
                             <img src="assets/img/lombo.jpg" alt="lombo">
                         </div>
@@ -61,7 +63,7 @@
     
                 <div class="sabores sabor-selecionado">
                     <label>
-                        <input type="checkbox" name="sabores[]" value="">
+                        <input type="checkbox" name="sabores[]" value="" onchange="updateCount()">
                         <div class="img-pizza">
                             <img src="assets/img/frango.jpg" alt="lombo">
                         </div>
@@ -75,7 +77,7 @@
             
                 <div class="sabores sabor-selecionado">
                     <label>
-                        <input type="checkbox" name="sabores[]" value="">
+                        <input type="checkbox" name="sabores[]" value="" onchange="updateCount()">
                         <div class="img-pizza">
                             <img src="assets/img/lombo.jpg" alt="lombo">
                         </div>
@@ -89,7 +91,7 @@
             
                 <div class="sabores sabor-selecionado">
                     <label>
-                        <input type="checkbox" name="sabores[]" value="">
+                        <input type="checkbox" name="sabores[]" value="" onchange="updateCount()">
                         <div class="img-pizza">
                             <img src="assets/img/queijo.jpg" alt="lombo">
                         </div>
@@ -102,7 +104,7 @@
             
                 <div class="sabores sabor-selecionado">
                     <label>
-                        <input type="checkbox" name="sabores[]" value="">
+                        <input type="checkbox" name="sabores[]" value="" onchange="updateCount()">
                         <div class="img-pizza">
                             <img src="assets/img/salame.png" alt="lombo">
                         </div>
@@ -117,7 +119,7 @@
             
                 <div class="sabores sabor-selecionado">
                     <label>
-                        <input type="checkbox" name="sabores[]" value="">
+                        <input type="checkbox" name="sabores[]" value="" onchange="updateCount()">
                         <div class="img-pizza">
                             <img src="assets/img/milho.jpg" alt="lombo">
                         </div>
@@ -132,7 +134,7 @@
             
                 <div class="sabores sabor-selecionado">
                     <label>
-                        <input type="checkbox" name="sabores[]" value="">
+                        <input type="checkbox" name="sabores[]" value="" onchange="updateCount()">
                         <div class="img-pizza">
                             <img src="assets/img/chocolate.jpg" alt="Chocolate">
                         </div>
@@ -147,7 +149,7 @@
             
                 <div class="sabores sabor-selecionado">
                     <label>
-                        <input type="checkbox" name="sabores[]" value="">
+                        <input type="checkbox" name="sabores[]" value="" onchange="updateCount()">
                         <div class="img-pizza">
                             <img src="assets/img/moarngo.png" alt="Chocolate com morango">
                         </div>
@@ -162,7 +164,7 @@
             
                 <div class="sabores sabor-selecionado">
                     <label>
-                        <input type="checkbox" name="sabores[]" value="">
+                        <input type="checkbox" name="sabores[]" value="" onchange="updateCount()">
                         <div class="img-pizza">
                             <img src="assets/img/2amores.jpg" alt="2 amores">
                         </div>
