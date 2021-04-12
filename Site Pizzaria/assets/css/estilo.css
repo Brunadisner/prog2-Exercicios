@@ -128,16 +128,7 @@ tr:nth-child(odd){
 
 /*-----------chat---------*/
 #chat{
-    color:white;
-    display: flex;
-    background-color: #31D60F;
-    width: 300px;
-    height: 50px;
-    position: fixed;
-    left: 50px;
-    bottom: 5px;
-    border-radius: 5px;
-    font-style: bold;
+    
     display: none;
     
 
@@ -189,6 +180,7 @@ input[type=date],textarea, select{
     border-color: blue;
     border-radius: 5%;
     border-width: 2px;
+    display: inline-block;
 }
 select{
     width: 50%;
@@ -292,8 +284,8 @@ footer {
     flex-wrap:wrap;
 }
 .mapa{
-    width:"400" ;
-    height:"150" ;
+    width:400px;
+    height:250px;
 }
 
 
@@ -325,7 +317,28 @@ footer {
         display: initial;
     }
     #chat{
-        display:initial;
+        display:flex;
+        color:white;
+        display: flex;
+        background-color: #31D60F;
+        width: 250px;
+        height: 100px;
+        position: fixed;
+        left: 50px;
+        bottom: 5px;
+        border-radius: 5px;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .btChat{
+        background-color:gray;
+        border: 1px solid blue;
+        padding:2px 5px;
+        margin: 2px;
+        cursor: pointer;
+    }
+    #chat #botoes{
+        display: flex;
     }
     nav ul li{
         display: inline;/*transforma em elemento inline*/
@@ -347,10 +360,11 @@ footer {
     input[type=text], input[type=email], input[type=password], input[type=tel],
     input[type=date],textarea{
         width: 30%;
+        display: inline-block;
         
     }
     .mapa{
-        width:"600" ;
-        height:"450" ;
+        width:600px;
+        height:450px;
     }
 }
