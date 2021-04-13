@@ -94,7 +94,7 @@ function validateForm(){
     var telefone = document.getElementById("id_telefone").value;
     var bairro = document.getElementById("id_bairro").value;
     var senha = document.getElementById("id_senha").value;
-    var confirma_senha = document.getElementById("id_senha2");
+    var confirma_senha = document.getElementById("id_senha2").value;
     if (nome == null || nome == "" || nome.indexOf(" ") == -1){
         alert("O nome completo deve ser preenchido");
         return false;
@@ -115,17 +115,15 @@ function validateForm(){
         alert("O bairro deve ser preenchido");
         return false;
     }
-    if (senha == null || senha == ""){
-        alert("A senha deve ser preenchida");
-        return false;
-    }
   
-    if(senha.value != confirma_senha.value){
-        confirma_senha.setCustomValidity("Senhas diferentes!");
+    if(senha != "" && confirma_senha != "" && senha === confirma_senha){
+        alert("Senhas iguais!");
     }
     else{
-        confirma_senha.setCustomValidity('');
+        alert('Senhas Diferentes, digite novamente');
+        return false;
     }
+        
     
 }
 
