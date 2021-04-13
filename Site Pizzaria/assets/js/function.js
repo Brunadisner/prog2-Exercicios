@@ -117,7 +117,7 @@ function validateForm(){
     }
   
     if(senha != "" && confirma_senha != "" && senha === confirma_senha){
-        alert("Senhas iguais!");
+        return true;
     }
     else{
         alert('Senhas Diferentes, digite novamente');
