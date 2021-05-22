@@ -54,13 +54,13 @@
     <div>
         <fieldset>
             <legend>Como conheceu nossa empresa?</legend>
-            <label><input type="radio" name="field_comoConheceu" value="Loja física">Loja física</label>
+            <label><input type="radio" name="field_comoConheceu" value="1">Loja física</label>
             <br>
-            <label><input type="radio" name="field_comoConheceu" value="Redes sociais">Redes sociais</label>
+            <label><input type="radio" name="field_comoConheceu" value="2">Redes sociais</label>
             <br>
-            <label><input type="radio" name="field_comoConheceu"value="Publicidade">Publicidade</label>
+            <label><input type="radio" name="field_comoConheceu"value="3">Publicidade</label>
             <br>
-            <label><input type="radio" name="field_comoConheceu"value="Indicação de amigos">Indicação de amigos</label>
+            <label><input type="radio" name="field_comoConheceu"value="4">Indicação de amigos</label>
     </fieldset>
 </div>
 <br>
