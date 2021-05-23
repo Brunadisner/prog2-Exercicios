@@ -250,7 +250,7 @@ footer {
     width: 300px;
     min-height: 120px;
     border: 2px dotted yellow;
-    margin: 5px;
+    margin: 3px;
     padding: 5px;
     background-color: bisque;
     transition: 0.6s;
@@ -260,7 +260,7 @@ footer {
     transition: 0.6s;
 }
 .sabores label{
-    display: flex;
+    display:flex;
     align-items:center;
 }
 .sabores img{
@@ -279,8 +279,8 @@ footer {
 }*/
 #lista{
     display: flex;
-    flex-direction: row;
-    justify-content:space-between;
+    flex-direction:row;
+    justify-content:baseline;
     flex-wrap:wrap;
 }
 #opcoes_pedido{

@@ -1,15 +1,3 @@
-<?php
-$conexao = mysqli_connect("localhost","admpizza","12345","pizza");
-$sql = "select * from sabor";
-$resultado = mysqli_query($conexao,$sql);
-
-mysqli_close($conexao);
-?>
-
-
-
-
-
 <h2>Faça o seu pedido.</h2>
 <hr>
 <form action="carrinho.php" method="post" onsubmit="return addToCart()">
@@ -28,19 +16,28 @@ mysqli_close($conexao);
     <div id="lista">
 
     <?php
-    while($array = mysqli_fetch_array($resultado)){
+    //$conexao = mysqli_connect("localhost","admpizza","12345","pizza");
+    //$sql = "select * from sabor";
+    //$resultado = mysqli_query($conexao,$sql);
+    //mysqli_close($conexao);
+    //while($array = mysqli_fetch_array($resultado)){
+    require_once "classes/Sabor.php";
+    require_once "classes/SaborDAO.php";
+    $obj = new SaborDAO;
+    $lista = $obj->listar();
+    foreach($lista as $sabor){
 
     ?>
     
     <div class="sabores sabor-selecionado">
     <label>
-        <input type="checkbox" name="sabores[]" value="<?=$array['codigo']?>" onchange="updateCount()">
+        <input type="checkbox" name="sabores[]" value="<?=$sabor->getCodigo()?>" onchange="updateCount()">
         <div class="img-pizza">
-            <img src="assets/img/<?=$array['nomeImagem']?>" alt="lombo">
+            <img src="assets/img/<?=$sabor->getNomeImagem()?>" alt=<?=$sabor->getNome()?>>
         </div>
         <div class="sabor-desc">
-            <strong><?=$array['nome']?></strong>
-            <?=$array['ingredientes']?>
+            <strong><?=$sabor->getNome()?></strong>
+            <?=$sabor->getIngredientes()?>
         </div>
     </label>
     </div>
@@ -60,7 +57,7 @@ mysqli_close($conexao);
         <label><input type="radio" name="borda" value="">Doce de leite</label><br>
 </fieldset>
 <br>
-<input type="submit" value="Adicionar ao carrinho" name="adicionar">
+    <input type="submit" value="Adicionar ao carrinho" name="adicionar">
 </div>
 </form>
 
