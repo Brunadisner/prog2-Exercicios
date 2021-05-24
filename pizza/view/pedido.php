@@ -21,11 +21,14 @@
     //$resultado = mysqli_query($conexao,$sql);
     //mysqli_close($conexao);
     //while($array = mysqli_fetch_array($resultado)){
-    require_once "classes/Sabor.php";
     require_once "classes/SaborDAO.php";
     $obj = new SaborDAO;
     $lista = $obj->listar();
-    foreach($lista as $sabor){
+    if(count($lista)==0){
+        echo "Nenhum sabor encontrado";
+    }
+    else{
+        foreach($lista as $sabor){
 
     ?>
     
@@ -57,7 +60,10 @@
         <label><input type="radio" name="borda" value="">Doce de leite</label><br>
 </fieldset>
 <br>
-    <input type="submit" value="Adicionar ao carrinho" name="adicionar">
+    <input type="submit" value="Adicionar ao carrinho" name="adicionar" id="submit">
+    <?php
+    }
+    ?>
 </div>
 </form>
 

@@ -250,7 +250,7 @@ footer {
     width: 300px;
     min-height: 120px;
     border: 2px dotted yellow;
-    margin: 3px;
+    margin: 5px;
     padding: 5px;
     background-color: bisque;
     transition: 0.6s;
@@ -282,6 +282,12 @@ footer {
     flex-direction:row;
     justify-content:baseline;
     flex-wrap:wrap;
+}
+#submit{
+    width: 30%;
+    height: 30%;
+    margin-top: 150px;
+    
 }
 #opcoes_pedido{
     display: none;
