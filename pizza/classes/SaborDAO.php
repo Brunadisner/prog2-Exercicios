@@ -25,6 +25,20 @@
 
         }
 
+        public function buscar($cod){
+            try{
+                $query = $this->conexao->prepare("select * from sabor where codigo = :cod");
+                $query->bindParam(":cod", $cod, PDO::PARAM_INT);
+                $query->execute();
+                $registro = $query->fetch(PDO::FETCH_CLASS, "Sabor");
+                return $registro[0];
+            }
+            catch(PDOException $e){
+                echo "Erro no acesso aos dados:".$e->getMessage();
+            }
+
+        }
+
         public function inserir(){
 
 

@@ -7,7 +7,7 @@
     <meta name="keywords" content="Pizzaria, Disner's, Pizza, pedido online">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- links para os arquivos css-->
-    <link rel="stylesheet" href="assets/css/estilo.css">
+    <link rel="stylesheet" href="../assets/css/estilo.css">
 </head>
     <header>
         <h1> Disner's Pizzaria - Back Office</h1>
