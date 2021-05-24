@@ -31,7 +31,7 @@
                 $query->bindParam(":cod", $cod, PDO::PARAM_INT);
                 $query->execute();
                 $registro = $query->fetch(PDO::FETCH_CLASS, "Sabor");
-                return $registro[0];
+                return $registro;
             }
             catch(PDOException $e){
                 echo "Erro no acesso aos dados:".$e->getMessage();
