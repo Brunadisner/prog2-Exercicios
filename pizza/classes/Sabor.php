@@ -41,7 +41,18 @@
             $this->nomeImagem = $nomeImagem;
         }
 
+        public function validate(){
+            $erros = array();
+            if(empty($this->getNome()))
+                $erros[] = "É necessário informar um nome";
+            if(empty($this->getIngredientes()))
+                $erros[] = "É necessário informar os ingredientes";
 
+            if(empty($this->getNomeImagem()))
+                $erros[] = "É necessário selecionar uma imagem";
+            
+            return $erros;
+        }
     }
 
 

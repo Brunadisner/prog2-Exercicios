@@ -20,12 +20,12 @@ $saborFoto = "chocob3.jpg"; // viria do $_GET ou do $_POST
 //$conexao->query("insert into sabor values (NULL, '$saborNome', '$saborIngredientes', '$saborFoto')");
 
 // prepared statements
-// $query = $conexao->prepare("insert into sabor values (NULL, :n, :i, :f)");
-// $query->bindParam(":n", $saborNome);
-// $query->bindParam(":i", $saborIngredientes);
-// $query->bindParam(":f", $saborFoto);
-// $query->execute();
-// echo "Linhas afetadas: ".$query->rowCount();
+$query = $conexao->prepare("insert into sabor values (NULL, :n, :i, :f)");
+$query->bindParam(":n", $saborNome);
+$query->bindParam(":i", $saborIngredientes);
+$query->bindParam(":f", $saborFoto);
+$query->execute();
+echo "Linhas afetadas: ".$query->rowCount();
 
 ///////////////////////////////////////////////////////////////// update
 

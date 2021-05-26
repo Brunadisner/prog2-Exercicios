@@ -39,20 +39,52 @@
 
         }
 
-        public function inserir(){
-
+        public function inserir(Sabor $sabor){
+            try{
+                $query = $this->conexao->prepare("insert into sabor values (NULL, :n, :i, :f)");
+                $query->bindParam(":n", $sabor->getNome());
+                $query->bindParam(":i", $sabor->getIngredientes());
+                $query->bindParam(":f", $sabor->getNomeImagem());
+                return $query->execute();
+                
+            }
+            catch(PDOException $e){
+                echo "Erro no acesso aos dados:".$e->getMessage();
+            }
+           
 
 
         }
 
-        public function alterar(){
-
+        public function alterar(Sabor $sabor){
+            try{
+                $query = $this->conexao->prepare("update sabor set nome = :n, ingredientes = :i, 
+                nomeImagem = :f where codigo = :cod");
+                $query->bindParam(":n", $sabor->getNome());
+                $query->bindParam(":i", $sabor->getIngredientes());
+                $query->bindParam(":f", $sabor->getNomeImagem());
+                $query->bindParam(":cod", $sabor->getCodigo());
+                return $query->execute();
+                
+            }
+            catch(PDOException $e){
+                echo "Erro no acesso aos dados:".$e->getMessage();
+            }
 
 
         }
 
-        public function excluir(){
-
+        public function excluir($cod){
+            
+            try{
+                $query = $this->conexao->prepare("delete from sabor where codigo = :cod");
+                $query->bindParam(":cod",$cod);
+                return $query->execute();
+                
+            }
+            catch(PDOException $e){
+                echo "Erro no acesso aos dados:".$e->getMessage();
+            }
 
 
 

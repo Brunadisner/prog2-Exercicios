@@ -68,6 +68,13 @@ class cliente{
     public function setSenha($senha){
         $this->senha = $senha;
     }
+    public function getSenha2(){
+        return $this->senha2;
+    }
+
+    public function setSenha2($senha2){
+        $this->senha = $senha2;
+    }
     public function getConheceu(){
         return $this->comoConheceu;
     }

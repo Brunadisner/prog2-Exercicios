@@ -39,8 +39,30 @@
 
         }
 
-        public function inserir(){
+        public function inserir(Cliente $cliente){
+            try{
+                $query = $this->conexao->prepare("insert into cliente values (NULL, :n, :e, :t,
+                :end, :b, :s, :s2, :cc, :pp)");
+                $query->bindParam(":n", $cliente->getNome());
+                $query->bindParam(":e", $cliente->getEmail());
+                $query->bindParam(":t", $cliente->getTelefone());
+                $query->bindParam(":end", $cliente->getEndereco());
+                $query->bindParam(":b", $cliente->getBairro());
+                $query->bindParam(":s", $cliente->getSenha());
+                $query->bindParam(":s2", $cliente->getSenha2());
+                $query->bindParam(":cc", $cliente->getConheceu());
+                $query->bindParam(":pp", $cliente->getPromo());
 
+
+
+
+                return $query->execute();
+                
+            }
+            catch(PDOException $e){
+                echo "Erro no acesso aos dados:".$e->getMessage();
+            }
+           
 
 
         }
