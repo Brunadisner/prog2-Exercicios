@@ -91,6 +91,23 @@ class cliente{
     public function setPromo($promoPizza){
         $this->senha2 = $promoPizza;
     }
+
+    public function validate(){
+        $erros = array();
+        if(empty($this->getNome()))
+            $erros[] = "É necessário informar um nome";
+        if(empty($this->getEmail()))
+            $erros[] = "É necessário informar um endereço de e-mail";
+        elseif(!filter_var($this->getEmail(),FILTER_VALIDATE_EMAIL))
+            $erros[] = "Verifique o formato do endereço de e-mail";
+        if(empty($this->getTelefone()))
+            $erros[] = "É necessário informar um telefone válido";
+        if(strlen($this->getSenha()) < 6)
+            $erros[] = "É necessário informar um telefone válido";       
+        if(empty($this->getSenha() != $this->getSenha2()))
+            $erros[] = "As senhas não conferem";   
+        return $erros;
+    }
 }
 
 

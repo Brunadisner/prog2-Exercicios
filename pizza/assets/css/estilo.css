@@ -84,11 +84,11 @@ a:link{
     color:rgb(211, 17, 17);
 }
 a:visited{
-    color:white;
+    color:black;
 }
 a:hover{
     color: rgb(201, 25, 25);
-    text-shadow: 5px 5px 5px rgb(255, 255, 255);
+    text-shadow: 5px 5px 5px rgb(221, 146, 146);
 }
 a:active{
     color: white(41, 30, 201);
@@ -103,7 +103,7 @@ nav{
     display: none;
 }
 #showMenu{
-    color:white;
+    color:cadetblue;
     border: 1px dotted white;
     padding:5px;
     margin-right: 80%;
@@ -113,14 +113,14 @@ nav{
 th,table,td{
     border: 1px double blueviolet;
     padding:10px;
-    color: antiquewhite;
+    color:rgb(73, 72, 72);
     font-weight: bold;
 }
 th{
     background-color:rgb(85, 180, 6);
 }
 tr:nth-child(even){
-    background-color: red;
+    background-color:lightgrey;
 }
 tr:nth-child(odd){
     background-color: darkseagreen;

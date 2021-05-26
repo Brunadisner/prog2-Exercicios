@@ -51,14 +51,55 @@ else{
             break;
         
         case 'altera':
-            echo $titulo = "Alteração de sabor";
+            $titulo = "Alterar sabor";
+
+            if(!isset($_POST['alterar'])){
+                $obj = new SaborDAO();
+                $sabor = $obj->buscar($_GET['cod']);
+                include "view/layout/topo.php";
+                include "view/alteraSabor.php";
+                include "view/layout/rodape.php";
+            }
+            else{
+                $obj = new Sabor();
+                $obj->setNome($_POST['field_nome']);
+                $obj->setIngredientes($_POST['field_ingredientes']);
+                $obj->setNomeImagem($_FILES['field_imagem']['name']);
+                $erros = $obj->validate();
+                if(count($erros)!=0){
+                    include "view/layout/topo.php";
+                    include "view/alteraSabor.php";
+                    include "view/layout/rodape.php";
+                }
+                else{
+                    $destino = "../assets/img/".$_FILES['field_imagem']['name'];
+                    if(move_uploaded_file($_FILES['field_imagem']['tmp_name'], $destino)){
+
+                        $bd = new SaborDAO();
+                        if($bd->alterar($obj))
+                            header("location: saborController.php");
+                    }
+                    else{
+                        $erros[]="Erro no upload";
+                        include "view/layout/topo.php";
+                        include "view/alteraSabor.php";
+                        include "view/layout/rodape.php";
+                    }
+                }
+            }
 
             break;
         
         case 'exclui':
             echo $titulo = "Exclusão de sabor";
+            if($bd->exluir($_GET['cod']))
+                header("Location: saborController.php");
     
             break;
 
+        default:
+            echo "Ação não permitida";
+
     }
 }
+?>
