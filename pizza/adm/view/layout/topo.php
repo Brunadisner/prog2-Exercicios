@@ -12,7 +12,7 @@
     <header>
         <h1> Disner's Pizzaria - Back Office</h1>
         <h2 class="slogan">  Área de administração</h2>
-        <div><img class="logo"src="assets/img/img1.png" alt="Logotipo pizzaria" ></div>
+        <div><img class="logo"src="../assets/img/img1.png" alt="Logotipo pizzaria" ></div>
         <span id="showMenu" onclick="showMenu()">&equiv;Menu</span>
     </header>
 <nav>
